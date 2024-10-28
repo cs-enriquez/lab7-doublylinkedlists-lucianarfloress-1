@@ -1,7 +1,9 @@
 	#include "StudentList.h"
 
 	// Define a constructor to initialize the list. The list starts with no Students
-    StudentList::StudentList() {}
+    StudentList::StudentList() {
+
+	}
 
 	// return the number of students currently in the list
 	int StudentList::listSize() {
@@ -20,12 +22,16 @@
 	// Remove the Node with the student at the back (tail) of the list
 	// should not fail if list is empty! Print an error message if this occurs
 	// Don't forget that your head and tail pointers will be null pointers if the list is empty
-	void StudentList::popBack() {}
+	void StudentList::popBack() {
+
+	}
 
 	// Remove the Node with the student at the front (head) of the list
 	// should not fail if list is empty! Print an error message if this occurs
 	// Don't forget that your head and tail pointers will be null pointers if the list is empty
-	void StudentList::popFront() {}
+	void StudentList::popFront() {
+		
+	}
 
 	//insert a student at the position "index".
 	// for this list, count head as index 0
@@ -70,3 +76,29 @@
 		StudentList fixthis;
 		return fixthis;
 	}
+#include <string>
+
+using namespace std;
+
+class Node {
+	public:
+		string data;
+		Node* next;
+		Node(string s);
+};
+
+class LLStack {
+	public:	
+		LLStack();           // the constructor
+		string top();        // return the top string of stack
+		int size();          // return size of stack
+		void push(string s); // push string s to the stack
+		void pop();          // remove the top string from the stack
+
+	private:
+		Node* head;         // pointer to the head of linked list
+		Node* tail;         // pointer to the tail of linked list
+		int count;          // keep track of size of stack
+
+};
+
